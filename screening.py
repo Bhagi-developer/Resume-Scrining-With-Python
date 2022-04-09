@@ -11,6 +11,13 @@ from pandas.plotting import scatter_matrix
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
 
+# following is to display the graph 
+import seaborn as sns
+plt.figure(figsize=(15,15))
+plt.xticks(rotation=90)
+sns.countplot(y="Category", data=resumeDataSet)
+# here above code will display a grapg with all categories
+
 resumeDataSet = pd.read_csv('UpdatedResumeDataSet.csv' ,encoding='utf-8')
 resumeDataSet['cleaned_resume'] = ''
 resumeDataSet.head()
