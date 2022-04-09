@@ -3,6 +3,21 @@ print (resumeDataSet['Category'].unique())
 
 """
 output
+Displaying the distinct categories of resume -
+['Data Science' 'HR' 'Advocate' 'Arts' 'Web Designing'
+ 'Mechanical Engineer' 'Sales' 'Health and fitness' 'Civil Engineer'
+ 'Java Developer' 'Business Analyst' 'SAP Developer' 'Automation Testing'
+ 'Electrical Engineering' 'Operations Manager' 'Python Developer'
+ 'DevOps Engineer' 'Network Security Engineer' 'PMO' 'Database' 'Hadoop'
+ 'ETL Developer' 'DotNet Developer' 'Blockchain' 'Testing']
+"""
+
+print ("Displaying the distinct categories of resume and the number of records belonging to each category -")
+print (resumeDataSet['Category'].value_counts())
+
+
+"""
+output
 Displaying the distinct categories of resume and the number of records belonging to each category -
 Java Developer               84
 Testing                      70
@@ -31,5 +46,3 @@ Civil Engineer               24
 Advocate                     20
 Name: Category, dtype: int64
 """
-
-
