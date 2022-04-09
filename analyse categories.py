@@ -32,7 +32,4 @@ Advocate                     20
 Name: Category, dtype: int64
 """
 
-import seaborn as sns
-plt.figure(figsize=(15,15))
-plt.xticks(rotation=90)
-sns.countplot(y="Category", data=resumeDataSet)
+
