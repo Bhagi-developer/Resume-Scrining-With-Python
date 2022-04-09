@@ -14,3 +14,18 @@ from sklearn import metrics
 resumeDataSet = pd.read_csv('UpdatedResumeDataSet.csv' ,encoding='utf-8')
 resumeDataSet['cleaned_resume'] = ''
 resumeDataSet.head()
+
+from matplotlib.gridspec import GridSpec
+targetCounts = resumeDataSet['Category'].value_counts()
+targetLabels  = resumeDataSet['Category'].unique()
+# Make square figures and axes
+plt.figure(1, figsize=(25,25))
+the_grid = GridSpec(2, 2)
+
+
+cmap = plt.get_cmap('coolwarm')
+colors = [cmap(i) for i in np.linspace(0, 1, 3)]
+plt.subplot(the_grid[0, 1], aspect=1, title='CATEGORY DISTRIBUTION')
+
+source_pie = plt.pie(targetCounts, labels=targetLabels, autopct='%1.1f%%', shadow=True, colors=colors)
+plt.show()
